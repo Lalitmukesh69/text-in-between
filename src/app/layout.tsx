@@ -17,12 +17,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://text-in-between.vercel.app"),
   title: {
     template: "%s - Text In Between",
-    absolute: "Text In Between",
+    default: "Text In Between - Auto Insert Text Behind Your Images",
   },
-  description:
-    "Auto insert text behind your image.",
+  description: "Create POV-style YouTube thumbnails and dynamic social media graphic overlays by placing customizable text layers behind the subject in your images.",
+  keywords: ["thumbnail generator", "background removal", "image text overlay", "POV thumbnail", "wasm background removal", "Next.js image processing"],
+  authors: [{ name: "Lalitmukesh69" }],
+  openGraph: {
+    title: "Text In Between - Auto Insert Text Behind Your Images",
+    description: "Create POV-style YouTube thumbnails and dynamic social media graphic overlays by placing customizable text layers behind the subject in your images.",
+    url: "https://github.com/Lalitmukesh69/text-in-between",
+    siteName: "Text In Between",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Text In Between - Auto Insert Text Behind Your Images",
+    description: "Create POV-style YouTube thumbnails and dynamic social media graphic overlays by placing customizable text layers behind the subject in your images.",
+  },
 };
 
 export default function RootLayout({
