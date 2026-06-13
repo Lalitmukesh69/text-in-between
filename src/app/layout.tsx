@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClientProvider from "../components/providers/ConvexClientProvider";
 import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script";
+import { Toaster } from "sonner";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-sans-font",
@@ -59,6 +60,7 @@ export default function RootLayout({
          <my-widget project-id="9"></my-widget>
           <ConvexClientProvider>
             {children}
+            <Toaster position="bottom-right" richColors />
           </ConvexClientProvider>
         </body>
       </html>

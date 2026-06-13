@@ -34,6 +34,7 @@ import {
 import { SkeletonCard } from "./SkeletonCard";
 import FontFamilyPicker from "./font-picker";
 import { Switch } from "./ui/switch";
+import { toast } from "sonner";
 
 interface TextElement {
   id: string;
@@ -108,9 +109,11 @@ const ThumbnailCreator = () => {
           const blob = await removeBackground(src);
           const processedUrl = URL.createObjectURL(blob);
           setProcessedImageSrc(processedUrl);
+          toast.success("Subject isolated successfully!");
         } catch (error) {
           console.error("Error removing background:", error);
           setProcessedImageSrc(null);
+          toast.error("Background isolation failed.");
         }
         setCanvasReady(true);
         if (textElements.length === 0) {
@@ -304,6 +307,7 @@ const ThumbnailCreator = () => {
       link.download = "thumbnail.png";
       link.href = canvasRef.current.toDataURL("image/png");
       link.click();
+      toast.success("Downloading your design!");
     }
   };
 
@@ -312,6 +316,7 @@ const ThumbnailCreator = () => {
     setBackgroundOpacity(100);
     setImageBrightness(100);
     setImageContrast(100);
+    toast.success("Controls reset successfully");
   };
 
   const resetImageAndCanvas = async () => {
@@ -321,6 +326,7 @@ const ThumbnailCreator = () => {
     setTextElements([]);
     resetAllControls();
     await refresh();
+    toast.info("Image cleared");
   }
 
   return (
