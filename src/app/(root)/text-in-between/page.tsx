@@ -10,7 +10,8 @@ import ThumbnailCreator from "@/components/thumbnail-creator";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 
 const EditorPage = async () => {
-  const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+  const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL || "https://dummy.convex.cloud";
+  const convex = new ConvexHttpClient(convexUrl);
   const user = await currentUser();
 
   let convexUser = null;
