@@ -55,7 +55,7 @@ export default function Home() {
             <div className="mt-10 flex flex-row items-center justify-center gap-4">
               <SignedIn>
                 <Link href="/text-in-between">
-                  <Button className="rounded-full px-6 py-5 shadow-xs">
+                  <Button className="rounded-full px-6 py-5 shadow-xs transition-all duration-200 hover:scale-[1.03] active:scale-[0.98] hover:shadow-sm">
                     Create New
                   </Button>
                 </Link>
@@ -63,14 +63,14 @@ export default function Home() {
               <SignedOut>
                 <Button
                   asChild
-                  className="rounded-full px-6 py-5 shadow-xs"
+                  className="rounded-full px-6 py-5 shadow-xs transition-all duration-200 hover:scale-[1.03] active:scale-[0.98] hover:shadow-sm"
                 >
                   <SignInButton mode="modal">Try Now</SignInButton>
                 </Button>
               </SignedOut>
               <Button
                 variant="outline"
-                className="rounded-full px-6 py-5"
+                className="rounded-full px-6 py-5 transition-all duration-200 hover:scale-[1.03] active:scale-[0.98] hover:bg-secondary"
                 asChild
               >
                 <Link href="https://youtu.be/iedOUP4Kl0U" target="_blank" rel="noopener noreferrer">Demo</Link>
