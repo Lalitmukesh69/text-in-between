@@ -17,7 +17,7 @@ export default function PricingPage() {
             <ArrowLeft className="h-4 w-4" />
             <p className="leading-7">Go back</p>
           </Link>
-          <Card>
+          <Card className="transition-all duration-300 hover:shadow-md hover:scale-[1.01] border-border/80 shadow-xs">
             <CardHeader className="text-center pb-2">
               <CardTitle className="text-2xl">Creator</CardTitle>
               <div className="mt-3">
