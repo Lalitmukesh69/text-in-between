@@ -21,9 +21,10 @@ export default function Home() {
         <nav className="flex items-center gap-6">
           <Link
             href="/pricing"
-            className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
+            className="relative text-muted-foreground hover:text-foreground text-sm font-medium transition-colors group py-1"
           >
             Pricing
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
           </Link>
           <SignedIn>
             <Button variant="default" className="rounded-full px-4" asChild>
